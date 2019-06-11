@@ -1,0 +1,27 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+
+Result Page
+{% endblock %}
+
+{% block main %}
+
+
+    <form action ="/search" >
+        <div><p><h1>SELECT</h1></p></div>
+        <div class="form-group">
+            <label class="sr-only" for="q">song</label>
+            <select name="name" id="name" >
+                {% for select in selects %}
+                  <option value={{select.song}}>{{select.song}}</option>
+                {%endfor%}
+            </select>
+        </div>
+        <div id =info></div>
+    </form>
+
+
+
+{% endblock %}

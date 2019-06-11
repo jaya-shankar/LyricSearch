@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+
+Home Page
+{% endblock %}
+
+{% block main %}
+
+
+    <form action ="/" >
+        <div><p><h1>SELECT</h1></p></div>
+        <div class="form-group">
+            <label class="sr-only" for="q">song</label>
+            <select name="name" id="name" onchange="show(this.value);">
+                {% for select in selects %}
+                  <option value={{select.song}}>{{select.song}}</option>
+                {%endfor%}
+            </select>
+            <img src='/finalProject/project0/posters/Havana.png' alt="havana"width="500" height="600">
+        </div>
+        <div id =info></div>
+    </form>
+
+
+
+{% endblock %}
